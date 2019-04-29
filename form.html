@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/styles.css">
-    <title>Document</title>
+    <title>Form for getting into The Good Place</title>
 </head>
 <body>
-    
+    <main>
+        <section>
+            <h2>Basic Info</h2>
+            <p>
+                <label class="your-name"> Your Name:</label>
+                <input class="text-input" type="text" id="name" 
+                placeholder="Your name here" name="name" required>
+            </p>
+            <p>
+                <label class="your-age">Age: </label>
+                <input class="text-input" type="text" id="age" name="age"
+                    required>
+            </p>
+            <p>
+                <label class="death-date">Date of death: </label>
+                <input class="text-input" type="text" id="death" name="death" required>
+            </p>
+        </section>
+        <section>
+            <h2>General Questions</h2>
+            <label class="flossed-nails">Have you ever flossed and/or cut your nails 
+                in a public place?</label>
+                <input type="radio" name="flossed" id="yes" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="flossed" id="no" value="no">
+                <label for="no">No</label>
+
+        </section>
+    </main>
 
     <script type="module" src="src/app.js"></script>
 </body>
