@@ -6,5 +6,7 @@ const goodPlaceApp = document.getElementById('good-place-app');
 
 goodPlaceApp.addEventListener('submit', (event) => {
     event.preventDefault();   
-    const goodPlaceAppData = new FormData(goodPlaceApp);
+    const formData = new FormData(goodPlaceApp);
+    const applicant = getApplicant(formData);
+    console.log(applicant);
 });
