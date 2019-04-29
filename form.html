@@ -11,30 +11,93 @@
     <main>
         <section>
             <h2>Basic Info</h2>
-            <p>
+            <div>
                 <label class="your-name"> Your Name:</label>
                 <input class="text-input" type="text" id="name" 
                 placeholder="Your name here" name="name" required>
-            </p>
-            <p>
+            </div>
+            <div>
                 <label class="your-age">Age: </label>
                 <input class="text-input" type="text" id="age" name="age"
                     required>
-            </p>
-            <p>
+            </div>
+            <div>
                 <label class="death-date">Date of death: </label>
                 <input class="text-input" type="text" id="death" name="death" required>
-            </p>
+            </div>
         </section>
         <section>
             <h2>General Questions</h2>
-            <label class="flossed-nails">Have you ever flossed and/or cut your nails 
-                in a public place?</label>
-                <input type="radio" name="flossed" id="yes" value="yes">
-                <label for="yes">Yes</label>
-                <input type="radio" name="flossed" id="no" value="no">
-                <label for="no">No</label>
+            <div>
+                <label class="flossed-nails">Have you ever flossed and/or cut your nails 
+                    in a public place?</label>
+                    <input type="radio" name="flossed" id="yes" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="flossed" id="no" value="no">
+                    <label for="no">No</label>
+            </div>
+            <div>
+                    <label class="man">Are you a man that has ever said, "Well actually..." to a woman?</label>
+                    <input type="radio" name="well-actually" id="yes" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="well-actually" id="no" value="no">
+                    <label for="no">No</label>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>
+                        Are you from California or Florida?
+                    </legend>
+                    <input type="checkbox" name="origin" id="florida" value="florida">
+                    <label for="florida">Florida</label>
+                    <input type="checkbox" input="checkbox" name="origin" id="california" value="california">
+                    <label for="california">California</label>
 
+                </fieldset>
+                </div>
+                <div>
+                    <label class="french-fries">Have you ever corrected someone saying french fries to freedom fries?</label>
+                        <input type="radio" name="fry-correction" id="yes" value="yes">
+                         <label for="yes">Yes</label>
+                         <input type="radio" name="fry-correction" id="no" value="no">
+                        <label for="no">No</label>
+                </div>
+                <div>
+                    <label class="prefered-show">Your prefered tv show on this list:</label>
+                    <select name="favorite-show">
+                        <option value="" hidden disabled selected>
+                            Choose your show 
+                        </option>
+                        <option value="duck-dynasty">
+                            Duck Dynasty
+                        </option>
+                        <option value="gossip-girl">
+                            Gossip Girl
+                        </option>
+                        <option value="days-of-our-lives">
+                            Days of Our Lives
+                        </option>
+                        <option value="stranger-things">
+                            Stranger Things
+                        </option>
+                        <option value="game-of-thrones">
+                            Game of Thrones
+                        </option>
+                        <option value="simpsons">
+                            The first ten seasons of The Simpsons
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="microwave-fish">How likely are you to microwave fish in the common room?</label>
+                    <input type="range" name="microwave-fish" id="microwave-fish" min="0" max="5" required>
+                </div>
+                <div>
+                    <label class="why-you" for="why-you">
+                        Last hoorah, tell us why you think you should get into The Good Place?
+                    </label>
+                    <textarea name="why-you" id="why-you">ex: I always follow through with plans, I take a shower before I get into a public pool or hot tub, I love dogs...</textarea>
+                </div>
         </section>
     </main>
 
