@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+    font-family: 'Quicksand', sans-serif; 
+    background-color: rgb(120, 186, 236);
+    text-align: center;
+}
+
+#why-you {
+    height: 100px;
+    width: 350px;
+    margin-top: 20px;
+}
+
+#submit-button {
+    height: 50px;
+    width: 150px;
+    font-size: 1.0em;
+    background-color: darkblue;
+    color: white;
+}
