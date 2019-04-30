@@ -1,5 +1,5 @@
 function getApplicant(formData) {
-    //convert data into variables
+    //convert our necessary values from strings into booleans and numbers
     const age = parseInt(formData.get('age'));
     const flossed = formData.get('flossed') === 'yes';
     console.log(formData.get('flossed'));
