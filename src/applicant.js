@@ -1,5 +1,5 @@
 //import our utility object for getting data
-import applicantApi from "./applicant-api.js";
+import applicantApi from './applicant-api.js';
 
 //reference all the DOM elements we need to update
 const name = document.getElementById('name');

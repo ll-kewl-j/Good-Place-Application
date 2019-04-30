@@ -7,6 +7,7 @@ const { window } = new JSDOM(``);
 global.window = window;
 global.document = window.document;
 global.FormData = window.FormData;
+global.localStorage = window.localStorage;
 
 
 
