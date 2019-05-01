@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    border: collapse;
+    border-spacing: 0em;
+    border: solid 2px black;
+}
+
+thead {
+    font-weight: bolder;
+    background: white;
+}
+
+td {
+    padding: 8px 5px;
+}
