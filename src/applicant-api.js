@@ -1,5 +1,6 @@
 
 const applicantApi = {
+    storage: localStorage,
     save(applicant) {
         // get applicant array
         const applicants = applicantApi.getAll();
