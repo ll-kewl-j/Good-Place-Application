@@ -11,11 +11,16 @@ const applicantApi = {
         //save to local storage
         applicantApi.storage.setItem('applicants', json);
     },
-    get() {
+    get(name) {
         //use getAll to fetch applicants
         const applicants = applicantApi.getAll();
         //return
-        return applicants[0];
+        for(let i = 0; i < applicants.length; i++) {
+            const applicant = applicants[i];
+            if(applicant.name === name) {
+                return applicant;
+            }
+        }
     },
     getAll() {
         //get from local storage

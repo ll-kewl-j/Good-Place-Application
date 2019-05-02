@@ -11,17 +11,18 @@ test('creates applicant api test', (assert) => {
 
     //Arrange
     // Set up your parameters and expectations
-    const applicant = {
-        name: 'SpongeBob'
-    
-    };
+    const applicant1 = { name: 'tester1' };
+    const applicant2 = { name: 'tester2' };
+
 
     //Act 
     // Call the function you're testing and set the result to a const
-    applicantApi.save(applicant);
-    const result = applicantApi.get();
+    applicantApi.save(applicant1);
+    applicantApi.save(applicant2);
+
+    const result = applicantApi.get(applicant2.name);
     //Assert
-    assert.deepEqual(result, applicant);
+    assert.deepEqual(result, applicant2);
 });
 test('no applicants in local storage, returns empty array', (assert) => {
     testStorage.removeItem('applicants');
