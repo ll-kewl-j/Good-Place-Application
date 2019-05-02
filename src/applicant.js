@@ -12,8 +12,13 @@ const favoriteShow = document.getElementById('favorite-show');
 const microwaveFish = document.getElementById('microwave-fish');
 const whyYou = document.getElementById('why-you');
 
+// get applicant name
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('name');
+
+
 //get our applicant data from the api
-const applicant = applicantApi.get();
+const applicant = applicantApi.get(id);
 
 //no applicant? no can do, head back to home page
 if(!applicant) {

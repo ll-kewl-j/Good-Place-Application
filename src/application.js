@@ -12,4 +12,5 @@ goodPlaceApp.addEventListener('submit', (event) => {
     const applicant = getApplicant(formData);
     //replaced console log with a call to API object to save the API data
     applicantApi.save(applicant);
+    window.location = 'thank-you.html';
 });

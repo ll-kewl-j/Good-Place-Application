@@ -1,18 +1,36 @@
 
 const applicantApi = {
+    storage: localStorage,
     save(applicant) {
+        // get applicant array
+        const applicants = applicantApi.getAll();
+        //add this applicant to the array 
+        applicants.push(applicant);
         //serialize JSON
-        const json = JSON.stringify(applicant);
+        const json = JSON.stringify(applicants);
         //save to local storage
-        localStorage.setItem('applicant', json);
+        applicantApi.storage.setItem('applicants', json);
     },
-    get() {
-        //get from local stoage
-        const json = localStorage.getItem('applicant');
-        //deserialize
-        const applicant = JSON.parse(json);
+    get(name) {
+        //use getAll to fetch applicants
+        const applicants = applicantApi.getAll();
         //return
-        return applicant;
+        for(let i = 0; i < applicants.length; i++) {
+            const applicant = applicants[i];
+            if(applicant.name === name) {
+                return applicant;
+            }
+        }
+    },
+    getAll() {
+        //get from local storage
+        const json = applicantApi.storage.getItem('applicants');
+        //deserialize to object
+        let applicants = JSON.parse(json);
+        if(!applicants) {
+            applicants = [];
+        }
+        return applicants;
     }
 
 };
